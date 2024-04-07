@@ -13,7 +13,7 @@ public class Message implements Serializable {
     private String getter;//接收者
     private String content;//消息内容
     private String sendTime;//发送时间
-    private String mesType;//消息类型[可以在接口定义消息类型]
+    private MessageType mesType; //消息类型[可以在接口定义消息类型]
 
     //进行扩展 和文件相关的成员
     private byte[] fileBytes;
@@ -53,11 +53,11 @@ public class Message implements Serializable {
         this.src = src;
     }
 
-    public String getMesType() {
+    public MessageType getMesType() {
         return mesType;
     }
 
-    public void setMesType(String mesType) {
+    public void setMesType(MessageType mesType) {
         this.mesType = mesType;
     }
 
